@@ -1,4 +1,4 @@
-package CW_4.socket2;
+package CW_4.socket1;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

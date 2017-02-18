@@ -39,7 +39,7 @@ public class Client {
                 out.writeUTF(line); // отсылаем введенную строку текста серверу.
                 out.flush(); // заставляем поток закончить передачу данных.
                 line = in.readUTF(); // ждем пока сервер отошлет строку текста.
-                System.out.println("The server was very polite. It sent me this : " + line);
+                System.out.println("The server was very polite. It sent me this : \n" + line);
                 System.out.println("Looks like the server is pleased with us. Go ahead and enter more lines.");
                 System.out.println();
             }

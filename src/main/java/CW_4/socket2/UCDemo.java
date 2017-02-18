@@ -1,4 +1,4 @@
-package CW_4.socket3;
+package CW_4.socket2;
 
 import java.io.InputStream;
 import java.net.URL;
