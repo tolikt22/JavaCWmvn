@@ -12,7 +12,7 @@ public class JabberServer {
         ServerSocket s = new ServerSocket(PORT);
         System.out.println("Started: " + s);
         try {
-            // Блокирует до тех пор, пока не возникнет соединение:
+            // Блокирует до тех пор, пока не возникнет соединение: _
             Socket socket = s.accept();
             try {
                 System.out.println("Connection accepted: " + socket);
