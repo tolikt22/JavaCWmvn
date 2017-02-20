@@ -13,8 +13,7 @@ public class CalculatorTest {
     @Test
     public void findValue_1() throws Exception {
         Calculator calculator = new Calculator();
-        assertEquals(2.545,calculator.findValue_1("2.545",'/'));
-    }
+        assertEquals(2.545,calculator.findValue_1("2.545",'/')); }
 
     @Test
     public void findValue_2() throws Exception {
