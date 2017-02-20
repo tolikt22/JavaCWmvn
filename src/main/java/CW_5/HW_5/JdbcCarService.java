@@ -1,6 +1,6 @@
 package CW_5.HW_5;// Created by tolik on 20.02.2017.
 
-public class JdbcCarTest {
+public class JdbcCarService {
     public static void main(String[] args) {
 
     }
