@@ -13,12 +13,12 @@ public class JDBCExample1 {
             Class.forName("org.postgresql.Driver");
             Connection con = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
             Statement st = con.createStatement();
-            Statement st1 = con.prepareStatement("SELECT  * FROM  employee WHERE name=?");
-            ResultSet rs = st.executeQuery("SELECT * FROM employee ORDER BY name DESC;");
+            Statement st1 = con.prepareStatement("SELECT  * FROM  car WHERE model=?");
+            ResultSet rs = st.executeQuery("SELECT * FROM engine ORDER BY id DESC;");
 //            ResultSet rs1 = st1.toString(1,'Anatolyii');
             while (rs.next()){
                 System.out.print(rs.getInt(1) + " - ");
-                System.out.print(rs.getString("salary") + " ");
+                System.out.print(rs.getString("power") + " ");
 //                System.out.println(rs1.getInt(1));
 
             }
