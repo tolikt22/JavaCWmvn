@@ -10,16 +10,15 @@ public class JdbcCarService {
     public static final String PASSWORD = "7777777a";
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-//        Engine engine = new Engine(11755, 4200, 250);
-//        Car car = new Car(50, "Studebecker", 1945, engine, 25000);
-
-        System.out.println(Car.getCarById(4));
-//        System.out.println(Engine.getEngineById(111755));
-//        getCarById(3);
-//        getEngineById(786254);
+        Engine engine = new Engine(11755, 4200, 250);
+        Car car = new Car(50, "Studebecker", 1945, 25000, engine);
 //        car.insertCar();
 //        engine.insertEngine();
+
+        Car.getCarById(3);
+//        engine.getEngineById(786254);
     }
+
     protected static Connection getDBConnection() throws ClassNotFoundException {
         Connection dbConnection = null;
         try {

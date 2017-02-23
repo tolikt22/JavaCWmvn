@@ -13,7 +13,7 @@ public class Engine {
         this.id = id;
         this.displacement = displacement;
         this.power = power;
-        this.cars = getCars(id);
+//        this.cars = getCars(id);
     }
 
     @Override
@@ -39,6 +39,7 @@ public class Engine {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println(engine);
         return engine;
     }
 
@@ -51,7 +52,6 @@ public class Engine {
     }
 
     public static Set<Car> getCars(int id) throws ClassNotFoundException {
-        Car car;
         Set<Car> cars = null;
         String carWithEngineNumber = "SELECT * FROM car INNER JOIN engine ON car.id_engine = engine.id AND engine.id=" + id + ";";
         Connection con = JdbcCarService.getDBConnection();
@@ -59,7 +59,7 @@ public class Engine {
             PreparedStatement st = con.prepareStatement(carWithEngineNumber);
             ResultSet res = st.executeQuery();
             while (res.next()) {
-                car = new Car(res.getInt(0),res.getString(1),res.getInt(2),res.getInt(3),Engine.getEngineById(res.getInt(3)));
+                Car car = new Car(res.getInt("id"),res.getString("model"),res.getInt("make"),res.getInt("price"),Engine.getEngineById(res.getInt(3)));
                 System.out.println(car);
                 cars.add(car);
             }

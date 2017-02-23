@@ -30,11 +30,11 @@ public class Car {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println(car);
         return car;
     }
     void insertCar() throws ClassNotFoundException {
-        String insString = "INSERT INTO car (id,model, make, id_engine, price) VALUES (" + this.id +",'"+model+"'"+","+make +","+engine +","+price+");";
-        System.out.println(insString);
+        String insString = "INSERT INTO car (id,model, make, id_engine, price) VALUES (" + this.id +",'"+model+"'"+","+make +","+engine.id +","+price+");";
         try {
             Class.forName("org.postgresql.Driver");
             Connection con = DriverManager.getConnection(URL,USER_NAME,PASSWORD);
